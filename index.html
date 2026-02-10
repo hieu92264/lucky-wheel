@@ -271,6 +271,546 @@
       Tất cả các số đã có giải!
     </div>
 
-    <script src="./main.js"></script>
+    <!-- <script>
+      // Chặn chuột phải
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // Chặn các phím tắt Inspect (F12, Ctrl+Shift+I, v.v.)
+      document.onkeydown = function (e) {
+        if (
+          e.keyCode == 123 ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.keyCode == "I".charCodeAt(0) ||
+              e.keyCode == "J".charCodeAt(0) ||
+              e.keyCode == "C".charCodeAt(0))) ||
+          (e.ctrlKey && e.keyCode == "U".charCodeAt(0))
+        ) {
+          return false;
+        }
+      };
+
+      setInterval(() => {
+        console.clear();
+        console.log(
+          "%cDừng lại!",
+          "color: red; font-size: 50px; font-weight: bold;"
+        );
+        console.log(
+          "%cĐây là khu vực bảo mật. Mọi hành vi can thiệp đều được ghi lại.",
+          "font-size: 18px;"
+        );
+      }, 1000);
+
+      const wheel = document.getElementById("wheel");
+      const slotInput = document.getElementById("slotInput");
+      const updateBtn = document.getElementById("updateWheel");
+      const spinBtn = document.getElementById("spinBtn");
+      const prizeSelect = document.getElementById("prizeSelect");
+      const resultModal = document.getElementById("resultModal");
+      const luckyNumberDisplay = document.getElementById("luckyNumber");
+      const prizeTextDisplay = document.getElementById("prizeText");
+
+      const fireworkSound = new Audio(
+        "./assets/audios/dragon-studio-fireworks-07-419025.mp3"
+      );
+      const cheerSound = new Audio(
+        "./assets/audios/mixkit-ending-show-audience-clapping-478.wav"
+      );
+
+      const riggedPrizes = {
+        nhat: [48],
+        nhi: [33, 7, 26],
+        ba: [10, 45, 55, 21],
+        khuyenkhich: [23, 6, 14, 18, 28, 34, 38, 42, 46, 53],
+      };
+
+      fireworkSound.loop = true;
+      cheerSound.loop = true;
+
+      let currentRotation = 0;
+      let isSpinning = false;
+      let segments = [];
+      let isModalOpen = false;
+
+      const colors = [
+        "#ef4444",
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#ec4899",
+        "#06b6d4",
+        "#f97316",
+      ];
+
+      function triggerContinuousFirework() {
+        if (!isModalOpen) return;
+
+        const defaults = {
+          startVelocity: 30,
+          spread: 360,
+          ticks: 60,
+          zIndex: 100,
+          colors: ["#ff0000", "#ffd700", "#ffffff"],
+        };
+
+        confetti({
+          ...defaults,
+          particleCount: 40,
+          origin: { x: Math.random() * 0.3 + 0.1, y: Math.random() - 0.2 },
+        });
+        confetti({
+          ...defaults,
+          particleCount: 40,
+          origin: { x: Math.random() * 0.3 + 0.6, y: Math.random() - 0.2 },
+        });
+
+        setTimeout(triggerContinuousFirework, 500);
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.innerText = message;
+
+        toast.classList.remove(
+          "opacity-0",
+          "translate-y-5",
+          "pointer-events-none"
+        );
+        toast.classList.add("opacity-100", "translate-y-0");
+
+        setTimeout(() => {
+          toast.classList.add(
+            "opacity-0",
+            "translate-y-5",
+            "pointer-events-none"
+          );
+          toast.classList.remove("opacity-100", "translate-y-0");
+        }, 3000);
+      }
+
+      function createWheel() {
+        const numSlots = Math.min(
+          Math.max(parseInt(slotInput.value) || 10, 1),
+          70
+        );
+        slotInput.value = numSlots;
+
+        wheel.innerHTML = "";
+        wheel.style.transition = "none";
+        wheel.style.transform = "rotate(0deg)";
+        currentRotation = 0;
+        segments = [];
+
+        const sliceAngle = 360 / numSlots;
+        let gradientParts = [];
+
+        for (let i = 0; i < numSlots; i++) {
+          const color = colors[i % colors.length];
+          gradientParts.push(
+            `${color} ${i * sliceAngle}deg ${(i + 1) * sliceAngle}deg`
+          );
+
+          const overlay = document.createElement("div");
+          overlay.className =
+            "absolute inset-0 transition-opacity duration-500 opacity-0";
+          overlay.style.background = `conic-gradient(transparent 0deg, transparent ${
+            i * sliceAngle
+          }deg, #475569 ${i * sliceAngle}deg, #475569 ${
+            (i + 1) * sliceAngle
+          }deg, transparent ${(i + 1) * sliceAngle}deg)`;
+          wheel.appendChild(overlay);
+
+          const label = document.createElement("div");
+          label.className =
+            "absolute top-0 left-1/2 -translate-x-1/2 h-1/2 origin-bottom flex items-start justify-center pt-4 font-black text-white text-shadow z-10";
+
+          if (numSlots > 40) label.style.fontSize = "10px";
+          else if (numSlots > 20) label.style.fontSize = "14px";
+          else label.style.fontSize = "20px";
+
+          label.style.transform = `translateX(-50%) rotate(${
+            i * sliceAngle + sliceAngle / 2
+          }deg)`;
+          label.innerText = i + 1;
+          wheel.appendChild(label);
+
+          segments.push({
+            index: i,
+            number: i + 1,
+            labelElement: label,
+            overlayElement: overlay,
+            isRemoved: false,
+          });
+        }
+        wheel.style.background = `conic-gradient(${gradientParts.join(", ")})`;
+      }
+
+      function spin() {
+        const activeSegments = segments.filter((s) => !s.isRemoved);
+
+        if (isSpinning || activeSegments.length === 0) {
+          if (activeSegments.length === 0) {
+            showToast("Tất cả các số đã có giải!");
+          }
+          return;
+        }
+
+        const selectedOption = prizeSelect.options[prizeSelect.selectedIndex];
+        const prizeValue = selectedOption.value;
+        const spinTime = parseInt(selectedOption.getAttribute("data-time"));
+        const prizeLabel = selectedOption.text.split("(")[0];
+
+        isSpinning = true;
+        spinBtn.disabled = true;
+        spinBtn.style.opacity = "0.5";
+
+        let winningSegment;
+
+        const MIN_TRIGGER = 50;
+
+        const allReservedNumbers = Object.values(riggedPrizes).flat();
+
+        const isLiveMode = parseInt(slotInput.value) >= MIN_TRIGGER;
+
+        const currentPrizePool = riggedPrizes[prizeValue] || [];
+        const availableRigged = activeSegments.filter(
+          (s) =>
+            currentPrizePool.includes(s.number) &&
+            s.number <= parseInt(slotInput.value)
+        );
+
+        if (isLiveMode && availableRigged.length > 0) {
+          winningSegment =
+            availableRigged[Math.floor(Math.random() * availableRigged.length)];
+        } else if (isLiveMode) {
+          const safeRandomSegments = activeSegments.filter(
+            (s) => !allReservedNumbers.includes(s.number)
+          );
+          winningSegment =
+            safeRandomSegments.length > 0
+              ? safeRandomSegments[
+                  Math.floor(Math.random() * safeRandomSegments.length)
+                ]
+              : activeSegments[
+                  Math.floor(Math.random() * activeSegments.length)
+                ];
+        } else {
+          winningSegment =
+            activeSegments[Math.floor(Math.random() * activeSegments.length)];
+        }
+
+        const numSlots = segments.length;
+        const sliceAngle = 360 / numSlots;
+
+        const extraDegrees =
+          360 - (winningSegment.index * sliceAngle + sliceAngle / 2);
+        const totalRotation =
+          currentRotation + 360 * 10 + (extraDegrees - (currentRotation % 360));
+
+        wheel.style.transition = `transform ${spinTime}s cubic-bezier(0.1, 0, 0.1, 1)`;
+        wheel.style.transform = `rotate(${totalRotation}deg)`;
+        currentRotation = totalRotation;
+
+        setTimeout(() => {
+          showResult(winningSegment.number, prizeLabel);
+          winningSegment.isRemoved = true;
+          winningSegment.overlayElement.style.opacity = "1";
+          winningSegment.labelElement.style.color = "#ffffff";
+          winningSegment.labelElement.style.opacity = "0.8";
+
+          isSpinning = false;
+          spinBtn.disabled = false;
+          spinBtn.style.opacity = "1";
+        }, spinTime * 1000);
+      }
+
+      function showResult(num, prize) {
+        luckyNumberDisplay.innerText = num;
+        prizeTextDisplay.innerText = prize;
+        resultModal.classList.remove("hidden");
+
+        setTimeout(() => {
+          resultModal.classList.add("opacity-100");
+          document.getElementById("modalContent").classList.remove("scale-90");
+
+          isModalOpen = true;
+          fireworkSound.play();
+          cheerSound.play();
+          triggerContinuousFirework();
+        }, 50);
+      }
+
+      function closeModal() {
+        resultModal.classList.remove("opacity-100");
+        document.getElementById("modalContent").classList.add("scale-90");
+
+        isModalOpen = false;
+        fireworkSound.pause();
+        fireworkSound.currentTime = 0;
+        cheerSound.pause();
+        cheerSound.currentTime = 0;
+
+        setTimeout(() => {
+          resultModal.classList.add("hidden");
+        }, 500);
+      }
+
+      updateBtn.addEventListener("click", createWheel);
+      spinBtn.addEventListener("click", spin);
+      createWheel();
+    </script> -->
+
+    <!-- https://console.firebase.google.com/u/2/project/lucky-wheel-469a8/database/lucky-wheel-469a8-default-rtdb/data/~2F -->
+
+    <!-- <script src="./main.js"></script> -->
+
+    <script type="module">
+      // --- 1. CẤU HÌNH FIREBASE ---
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+      } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+      const firebaseConfig = {
+        databaseURL:
+          "https://lucky-wheel-469a8-default-rtdb.asia-southeast1.firebasedatabase.app/",
+      };
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+
+      let remoteVipSignal = false; // Tín hiệu từ điện thoại
+
+      // Lắng nghe tín hiệu bí mật
+      onValue(ref(db, "isVipMode"), (snapshot) => {
+        remoteVipSignal = snapshot.val();
+        // Bạn có thể xóa dòng console.log bên dưới khi chạy thật để giấu kín
+        console.log("System Status:", remoteVipSignal ? "VIP" : "Normal");
+      });
+
+      // --- 2. LOGIC VÒNG QUAY ---
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      document.onkeydown = function (e) {
+        if (
+          e.keyCode == 123 ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) ||
+          (e.ctrlKey && e.keyCode == 85)
+        ) {
+          return false;
+        }
+      };
+
+      const wheel = document.getElementById("wheel");
+      const slotInput = document.getElementById("slotInput");
+      const updateBtn = document.getElementById("updateWheel");
+      const spinBtn = document.getElementById("spinBtn");
+      const prizeSelect = document.getElementById("prizeSelect");
+      const resultModal = document.getElementById("resultModal");
+      const luckyNumberDisplay = document.getElementById("luckyNumber");
+      const prizeTextDisplay = document.getElementById("prizeText");
+
+      const fireworkSound = new Audio(
+        "./assets/audios/dragon-studio-fireworks-07-419025.mp3"
+      );
+      const cheerSound = new Audio(
+        "./assets/audios/mixkit-ending-show-audience-clapping-478.wav"
+      );
+
+      const riggedPrizes = {
+        nhat: [48],
+        nhi: [33, 7, 26],
+        ba: [10, 45, 55, 21],
+        khuyenkhich: [23, 6, 14, 18, 28, 34, 38, 42, 46, 53],
+      };
+
+      let currentRotation = 0;
+      let isSpinning = false;
+      let segments = [];
+      let isModalOpen = false;
+
+      const colors = [
+        "#ef4444",
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#ec4899",
+        "#06b6d4",
+        "#f97316",
+      ];
+
+      function triggerContinuousFirework() {
+        if (!isModalOpen) return;
+        confetti({
+          particleCount: 40,
+          spread: 360,
+          origin: { x: Math.random() * 0.3 + 0.1, y: Math.random() - 0.2 },
+        });
+        confetti({
+          particleCount: 40,
+          spread: 360,
+          origin: { x: Math.random() * 0.3 + 0.6, y: Math.random() - 0.2 },
+        });
+        setTimeout(triggerContinuousFirework, 500);
+      }
+
+      function createWheel() {
+        const numSlots = Math.min(
+          Math.max(parseInt(slotInput.value) || 10, 1),
+          70
+        );
+        wheel.innerHTML = "";
+        wheel.style.transform = "rotate(0deg)";
+        currentRotation = 0;
+        segments = [];
+        const sliceAngle = 360 / numSlots;
+        let gradientParts = [];
+
+        for (let i = 0; i < numSlots; i++) {
+          const color = colors[i % colors.length];
+          gradientParts.push(
+            `${color} ${i * sliceAngle}deg ${(i + 1) * sliceAngle}deg`
+          );
+
+          const overlay = document.createElement("div");
+          overlay.className =
+            "absolute inset-0 transition-opacity duration-500 opacity-0";
+          overlay.style.background = `conic-gradient(transparent ${
+            i * sliceAngle
+          }deg, #475569 ${i * sliceAngle}deg, #475569 ${
+            (i + 1) * sliceAngle
+          }deg, transparent ${(i + 1) * sliceAngle}deg)`;
+          wheel.appendChild(overlay);
+
+          const label = document.createElement("div");
+          label.className =
+            "absolute top-0 left-1/2 -translate-x-1/2 h-1/2 origin-bottom flex items-start justify-center pt-4 font-black text-white z-10";
+          label.style.fontSize =
+            numSlots > 40 ? "10px" : numSlots > 20 ? "14px" : "20px";
+          label.style.transform = `translateX(-50%) rotate(${
+            i * sliceAngle + sliceAngle / 2
+          }deg)`;
+          label.innerText = i + 1;
+          wheel.appendChild(label);
+
+          segments.push({
+            index: i,
+            number: i + 1,
+            labelElement: label,
+            overlayElement: overlay,
+            isRemoved: false,
+          });
+        }
+        wheel.style.background = `conic-gradient(${gradientParts.join(", ")})`;
+      }
+
+      function spin() {
+        const activeSegments = segments.filter((s) => !s.isRemoved);
+        if (isSpinning || activeSegments.length === 0) return;
+
+        const selectedOption = prizeSelect.options[prizeSelect.selectedIndex];
+        const prizeValue = selectedOption.value;
+        const spinTime = parseInt(selectedOption.getAttribute("data-time"));
+        const prizeLabel = selectedOption.text.split("(")[0];
+
+        isSpinning = true;
+        spinBtn.disabled = true;
+
+        let winningSegment;
+        const isLiveMode = parseInt(slotInput.value) >= 50;
+        const allReservedNumbers = Object.values(riggedPrizes).flat();
+
+        // LOGIC KÍCH HOẠT TỪ XA: Phải đủ vé VÀ điện thoại phải bật ON
+        const activateRigging = isLiveMode && remoteVipSignal;
+
+        console.log(
+          "Rigging Status:",
+          activateRigging ? "Activated" : "Deactivated"
+        );
+
+        const currentPrizePool = riggedPrizes[prizeValue] || [];
+        const availableRigged = activeSegments.filter(
+          (s) =>
+            currentPrizePool.includes(s.number) &&
+            s.number <= parseInt(slotInput.value)
+        );
+
+        if (activateRigging && availableRigged.length > 0) {
+          winningSegment =
+            availableRigged[Math.floor(Math.random() * availableRigged.length)];
+        } else if (isLiveMode) {
+          // Nếu LiveMode bật nhưng không có tín hiệu điện thoại -> Né số VIP để không bị trùng giải lớn
+          const safeRandom = activeSegments.filter(
+            (s) => !allReservedNumbers.includes(s.number)
+          );
+          winningSegment =
+            safeRandom.length > 0
+              ? safeRandom[Math.floor(Math.random() * safeRandom.length)]
+              : activeSegments[
+                  Math.floor(Math.random() * activeSegments.length)
+                ];
+        } else {
+          // Chế độ test hoặc không có tín hiệu -> Ngẫu nhiên
+          winningSegment =
+            activeSegments[Math.floor(Math.random() * activeSegments.length)];
+        }
+
+        const sliceAngle = 360 / segments.length;
+        const extraDegrees =
+          360 - (winningSegment.index * sliceAngle + sliceAngle / 2);
+        const totalRotation =
+          currentRotation + 360 * 10 + (extraDegrees - (currentRotation % 360));
+
+        wheel.style.transition = `transform ${spinTime}s cubic-bezier(0.1, 0, 0.1, 1)`;
+        wheel.style.transform = `rotate(${totalRotation}deg)`;
+        currentRotation = totalRotation;
+
+        setTimeout(() => {
+          showResult(winningSegment.number, prizeLabel);
+          winningSegment.isRemoved = true;
+          winningSegment.overlayElement.style.opacity = "1";
+          isSpinning = false;
+          spinBtn.disabled = false;
+        }, spinTime * 1000);
+      }
+
+      function showResult(num, prize) {
+        luckyNumberDisplay.innerText = num;
+        prizeTextDisplay.innerText = prize;
+        resultModal.classList.remove("hidden");
+        setTimeout(() => {
+          resultModal.classList.add("opacity-100");
+          isModalOpen = true;
+          fireworkSound.play();
+          cheerSound.play();
+          triggerContinuousFirework();
+        }, 50);
+      }
+
+      window.closeModal = function () {
+        // Đưa hàm ra ngoài scope module để HTML gọi được
+        resultModal.classList.remove("opacity-100");
+        isModalOpen = false;
+        fireworkSound.pause();
+        fireworkSound.currentTime = 0;
+        cheerSound.pause();
+        cheerSound.currentTime = 0;
+        setTimeout(() => resultModal.classList.add("hidden"), 500);
+      };
+
+      updateBtn.addEventListener("click", createWheel);
+      spinBtn.addEventListener("click", spin);
+      createWheel();
+    </script>
   </body>
 </html>
