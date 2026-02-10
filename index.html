@@ -4,21 +4,73 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>Vòng Quay May Mắn Pro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Lucky Wheel Master 2026 | Vòng Quay May Mắn</title>
+    <meta
+      name="description"
+      content="Vòng quay may mắn chuyên nghiệp cho sự kiện Tết 2026"
+    />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/3893/3893093.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn-icons-png.flaticon.com/512/3893/3893093.png"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link
       rel="stylesheet"
       href="main.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Tối ưu trải nghiệm cuộn và chạm trên mobile */
+      html,
+      body {
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+      }
+      h1 {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
   </head>
+
   <body
     class="text-slate-100 min-h-screen flex flex-col items-center py-6 md:py-10 px-4 overflow-hidden"
   >
@@ -38,14 +90,14 @@
           <div class="space-y-2">
             <label
               class="text-xs font-bold uppercase text-slate-400 tracking-wider"
-              >Số lượng ô (1 - 60)</label
+              >Số lượng ô (1 - 70)</label
             >
             <input
               type="number"
               id="slotInput"
-              value="10"
+              value="60"
               min="1"
-              max="60"
+              max="70"
               class="w-full h-[52px] bg-slate-900/60 border border-slate-600 rounded-xl px-4 py-3 focus:ring-2 ring-yellow-500 outline-none transition-all font-mono text-yellow-500 text-lg box-border"
             />
           </div>
@@ -70,19 +122,19 @@
                   value="ba"
                   data-time="7"
                 >
-                  🥉 Giải Ba: 200k
+                  🥉 Giải Ba
                 </option>
                 <option
                   value="nhi"
                   data-time="10"
                 >
-                  🥈 Giải Nhì: 300k
+                  🥈 Giải Nhì
                 </option>
                 <option
                   value="nhat"
                   data-time="15"
                 >
-                  🥇 Giải Nhất: 500k
+                  🥇 Giải Nhất
                 </option>
               </select>
               <div
@@ -108,9 +160,31 @@
 
         <button
           id="updateWheel"
-          class="w-full mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 py-4 rounded-xl font-bold shadow-lg transition-all active:scale-95 uppercase text-sm tracking-widest"
+          class="w-full mt-6 group relative overflow-hidden bg-gradient-to-r from-yellow-500 via-orange-500 to-yellow-600 p-[2px] rounded-2xl shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all active:scale-95"
         >
-          Làm mới vòng quay
+          <div
+            class="bg-slate-900/90 group-hover:bg-transparent transition-colors duration-300 rounded-[14px] py-4 px-6 flex items-center justify-center gap-3"
+          >
+            <svg
+              class="w-5 h-5 text-yellow-400 group-hover:text-slate-900 group-hover:rotate-180 transition-all duration-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 4v5h5M20 20v-5h-5M15.24 15.24A8 8 0 1120 12"
+              ></path>
+            </svg>
+
+            <span
+              class="font-black uppercase text-sm tracking-[0.15em] text-yellow-500 group-hover:text-slate-900 transition-colors"
+            >
+              Làm mới vòng quay
+            </span>
+          </div>
         </button>
       </div>
 
@@ -197,271 +271,6 @@
       Tất cả các số đã có giải!
     </div>
 
-    <script>
-      // Chặn chuột phải
-      // document.addEventListener("contextmenu", (event) =>
-      //   event.preventDefault()
-      // );
-
-      // // Chặn các phím tắt Inspect (F12, Ctrl+Shift+I, v.v.)
-      // document.onkeydown = function (e) {
-      //   if (
-      //     e.keyCode == 123 ||
-      //     (e.ctrlKey &&
-      //       e.shiftKey &&
-      //       (e.keyCode == "I".charCodeAt(0) ||
-      //         e.keyCode == "J".charCodeAt(0) ||
-      //         e.keyCode == "C".charCodeAt(0))) ||
-      //     (e.ctrlKey && e.keyCode == "U".charCodeAt(0))
-      //   ) {
-      //     return false;
-      //   }
-      // };
-
-      // setInterval(() => {
-      //   console.clear();
-      //   console.log(
-      //     "%cDừng lại!",
-      //     "color: red; font-size: 50px; font-weight: bold;"
-      //   );
-      //   console.log(
-      //     "%cĐây là khu vực bảo mật. Mọi hành vi can thiệp đều được ghi lại.",
-      //     "font-size: 18px;"
-      //   );
-      // }, 1000);
-
-      const wheel = document.getElementById("wheel");
-      const slotInput = document.getElementById("slotInput");
-      const updateBtn = document.getElementById("updateWheel");
-      const spinBtn = document.getElementById("spinBtn");
-      const prizeSelect = document.getElementById("prizeSelect");
-      const resultModal = document.getElementById("resultModal");
-      const luckyNumberDisplay = document.getElementById("luckyNumber");
-      const prizeTextDisplay = document.getElementById("prizeText");
-
-      const fireworkSound = new Audio(
-        "./assets/audios/dragon-studio-fireworks-07-419025.mp3"
-      );
-      const cheerSound = new Audio(
-        "./assets/audios/mixkit-ending-show-audience-clapping-478.wav"
-      );
-
-      fireworkSound.loop = true;
-      cheerSound.loop = true;
-
-      let currentRotation = 0;
-      let isSpinning = false;
-      let segments = [];
-      let isModalOpen = false;
-
-      const colors = [
-        "#ef4444",
-        "#3b82f6",
-        "#10b981",
-        "#f59e0b",
-        "#8b5cf6",
-        "#ec4899",
-        "#06b6d4",
-        "#f97316",
-      ];
-
-      function triggerContinuousFirework() {
-        if (!isModalOpen) return;
-
-        const defaults = {
-          startVelocity: 30,
-          spread: 360,
-          ticks: 60,
-          zIndex: 100,
-          colors: ["#ff0000", "#ffd700", "#ffffff"],
-        };
-
-        // Bắn pháo hoa ngẫu nhiên
-        confetti({
-          ...defaults,
-          particleCount: 40,
-          origin: { x: Math.random() * 0.3 + 0.1, y: Math.random() - 0.2 },
-        });
-        confetti({
-          ...defaults,
-          particleCount: 40,
-          origin: { x: Math.random() * 0.3 + 0.6, y: Math.random() - 0.2 },
-        });
-
-        // Tự động gọi lại chính nó sau 500ms để tạo vòng lặp
-        setTimeout(triggerContinuousFirework, 500);
-      }
-
-      function showToast(message) {
-        const toast = document.getElementById("toast");
-        toast.innerText = message;
-
-        // Hiện thông báo
-        toast.classList.remove(
-          "opacity-0",
-          "translate-y-5",
-          "pointer-events-none"
-        );
-        toast.classList.add("opacity-100", "translate-y-0");
-
-        // Tự động ẩn sau 3 giây
-        setTimeout(() => {
-          toast.classList.add(
-            "opacity-0",
-            "translate-y-5",
-            "pointer-events-none"
-          );
-          toast.classList.remove("opacity-100", "translate-y-0");
-        }, 3000);
-      }
-
-      function createWheel() {
-        const numSlots = Math.min(
-          Math.max(parseInt(slotInput.value) || 10, 1),
-          60
-        );
-        slotInput.value = numSlots;
-
-        wheel.innerHTML = "";
-        wheel.style.transition = "none";
-        wheel.style.transform = "rotate(0deg)";
-        currentRotation = 0;
-        segments = [];
-
-        const sliceAngle = 360 / numSlots;
-        let gradientParts = [];
-
-        for (let i = 0; i < numSlots; i++) {
-          const color = colors[i % colors.length];
-          gradientParts.push(
-            `${color} ${i * sliceAngle}deg ${(i + 1) * sliceAngle}deg`
-          );
-
-          // 1. Tạo lớp phủ màu xám (mặc định ẩn)
-          const overlay = document.createElement("div");
-          overlay.className =
-            "absolute inset-0 transition-opacity duration-500 opacity-0";
-          overlay.style.background = `conic-gradient(transparent 0deg, transparent ${
-            i * sliceAngle
-          }deg, #475569 ${i * sliceAngle}deg, #475569 ${
-            (i + 1) * sliceAngle
-          }deg, transparent ${(i + 1) * sliceAngle}deg)`;
-          wheel.appendChild(overlay);
-
-          // 2. Tạo nhãn số
-          const label = document.createElement("div");
-          label.className =
-            "absolute top-0 left-1/2 -translate-x-1/2 h-1/2 origin-bottom flex items-start justify-center pt-4 font-black text-white text-shadow z-10";
-
-          if (numSlots > 40) label.style.fontSize = "10px";
-          else if (numSlots > 20) label.style.fontSize = "14px";
-          else label.style.fontSize = "20px";
-
-          label.style.transform = `translateX(-50%) rotate(${
-            i * sliceAngle + sliceAngle / 2
-          }deg)`;
-          label.innerText = i + 1;
-          wheel.appendChild(label);
-
-          segments.push({
-            index: i,
-            number: i + 1,
-            labelElement: label,
-            overlayElement: overlay,
-            isRemoved: false,
-          });
-        }
-        wheel.style.background = `conic-gradient(${gradientParts.join(", ")})`;
-      }
-
-      function spin() {
-        const activeSegments = segments.filter((s) => !s.isRemoved);
-
-        if (isSpinning || activeSegments.length === 0) {
-          if (activeSegments.length === 0) {
-            showToast("Tất cả các số đã có giải!");
-          }
-          return;
-        }
-
-        const selectedOption = prizeSelect.options[prizeSelect.selectedIndex];
-        const spinTime = parseInt(selectedOption.getAttribute("data-time"));
-        const prizeLabel = selectedOption.text.split("(")[0];
-
-        isSpinning = true;
-        spinBtn.disabled = true;
-        spinBtn.style.opacity = "0.5";
-
-        const randomActiveIndex = Math.floor(
-          Math.random() * activeSegments.length
-        );
-        const winningSegment = activeSegments[randomActiveIndex];
-
-        const numSlots = segments.length;
-        const sliceAngle = 360 / numSlots;
-
-        const extraDegrees =
-          360 - (winningSegment.index * sliceAngle + sliceAngle / 2);
-        const totalRotation =
-          currentRotation + 360 * 10 + (extraDegrees - (currentRotation % 360));
-
-        wheel.style.transition = `transform ${spinTime}s cubic-bezier(0.1, 0, 0.1, 1)`;
-        wheel.style.transform = `rotate(${totalRotation}deg)`;
-        currentRotation = totalRotation;
-
-        setTimeout(() => {
-          showResult(winningSegment.number, prizeLabel);
-
-          // Đánh dấu đã trúng
-          winningSegment.isRemoved = true;
-
-          // HIỆU ỨNG: Hiện lớp phủ màu xám và giữ chữ trắng
-          winningSegment.overlayElement.style.opacity = "1";
-          winningSegment.labelElement.style.color = "#ffffff"; // Chữ trắng
-          winningSegment.labelElement.style.opacity = "0.8"; // Hơi mờ chữ một chút để trông hài hòa với nền xám
-
-          isSpinning = false;
-          spinBtn.disabled = false;
-          spinBtn.style.opacity = "1";
-        }, spinTime * 1000);
-      }
-
-      function showResult(num, prize) {
-        luckyNumberDisplay.innerText = num;
-        prizeTextDisplay.innerText = prize;
-        resultModal.classList.remove("hidden");
-
-        setTimeout(() => {
-          resultModal.classList.add("opacity-100");
-          document.getElementById("modalContent").classList.remove("scale-90");
-
-          isModalOpen = true;
-          fireworkSound.play();
-          cheerSound.play();
-          triggerContinuousFirework();
-        }, 50);
-      }
-
-      function closeModal() {
-        resultModal.classList.remove("opacity-100");
-        document.getElementById("modalContent").classList.add("scale-90");
-
-        isModalOpen = false;
-        fireworkSound.pause();
-        fireworkSound.currentTime = 0;
-        cheerSound.pause();
-        cheerSound.currentTime = 0;
-
-        setTimeout(() => {
-          resultModal.classList.add("hidden");
-        }, 500);
-      }
-
-      updateBtn.addEventListener("click", createWheel);
-      spinBtn.addEventListener("click", spin);
-      createWheel();
-    </script>
-
-    <!-- <script src="./main.js"></script> -->
+    <script src="./main.js"></script>
   </body>
 </html>
