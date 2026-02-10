@@ -1,421 +1,380 @@
-function _0x27ed(_0x2f510f, _0x2d5de2) {
-  _0x2f510f = _0x2f510f - 0x97;
-  const _0x2de553 = _0x2de5();
-  let _0x27ede8 = _0x2de553[_0x2f510f];
-  return _0x27ede8;
-}
-const _0x1817bc = _0x27ed;
-function _0x2de5() {
-  const _0x4655ca = [
-    "style",
-    "filter",
-    "keyCode",
-    "wheel",
-    "scale-90",
-    "resultModal",
-    "log",
-    "shiftKey",
-    "add",
-    "%cĐây\x20là\x20khu\x20vực\x20bảo\x20mật.\x20Mọi\x20hành\x20vi\x20can\x20thiệp\x20đều\x20được\x20ghi\x20lại.",
-    "disabled",
-    "includes",
-    "play",
-    "1278909QvSDCW",
-    "4091448GIGiJW",
-    "join",
-    "conic-gradient(transparent\x200deg,\x20transparent\x20",
-    "pointer-events-none",
-    "deg\x20",
-    "translate-y-0",
-    "#ffd700",
-    "background",
-    "deg,\x20#475569\x20",
-    "color",
-    "475841fPlmvs",
-    "opacity",
-    "charCodeAt",
-    "contextmenu",
-    "currentTime",
-    "#3b82f6",
-    "#f97316",
-    "rotate(",
-    "611856ShNRlG",
-    "deg)",
-    "10px",
-    "value",
-    "2434788pwJBjd",
-    "#ec4899",
-    "onkeydown",
-    "transform",
-    "Tất\x20cả\x20các\x20số\x20đã\x20có\x20giải!",
-    "isRemoved",
-    "modalContent",
-    "#10b981",
-    "random",
-    "selectedIndex",
-    "16GUfKND",
-    "font-size:\x2018px;",
-    "conic-gradient(",
-    "transition",
-    "#ffffff",
-    "loop",
-    "max",
-    "fontSize",
-    "134570BnSeeN",
-    "remove",
-    "length",
-    "translateX(-50%)\x20rotate(",
-    "prizeText",
-    "floor",
-    "number",
-    "ctrlKey",
-    "none",
-    "2133ivFnId",
-    "data-time",
-    "hidden",
-    "deg",
-    "#8b5cf6",
-    "rotate(0deg)",
-    "overlayElement",
-    "options",
-    "getElementById",
-    "luckyNumber",
-    "createElement",
-    "appendChild",
-    "split",
-    "slotInput",
-    "push",
-    "0.5",
-    "opacity-100",
-    "absolute\x20top-0\x20left-1/2\x20-translate-x-1/2\x20h-1/2\x20origin-bottom\x20flex\x20items-start\x20justify-center\x20pt-4\x20font-black\x20text-white\x20text-shadow\x20z-10",
-    "div",
-    "labelElement",
-    "5JCmPaE",
-    "updateWheel",
-    "translate-y-5",
-    "classList",
-    "preventDefault",
-    "pause",
-    "values",
-    "getAttribute",
-    "click",
-    "1215067hPzfrj",
-    "color:\x20red;\x20font-size:\x2050px;\x20font-weight:\x20bold;",
-    "absolute\x20inset-0\x20transition-opacity\x20duration-500\x20opacity-0",
-    "opacity-0",
-    "innerText",
-    "addEventListener",
-    "className",
-    "#f59e0b",
-    "%cDừng\x20lại!",
-  ];
-  _0x2de5 = function () {
-    return _0x4655ca;
-  };
-  return _0x2de5();
-}
-(function (_0x138153, _0x1c70f2) {
-  const _0x1d9e01 = _0x27ed,
-    _0x2efaec = _0x138153();
+const _0xdafb73 = _0x1355;
+(function (_0x4f8949, _0x4ca18e) {
+  const _0x1e1d8e = _0x1355,
+    _0x41a7a3 = _0x4f8949();
   while (!![]) {
     try {
-      const _0x5c04f8 =
-        -parseInt(_0x1d9e01(0xc3)) / 0x1 +
-        -parseInt(_0x1d9e01(0xcb)) / 0x2 +
-        -parseInt(_0x1d9e01(0xb8)) / 0x3 +
-        -parseInt(_0x1d9e01(0xcf)) / 0x4 +
-        (parseInt(_0x1d9e01(0x99)) / 0x5) * (-parseInt(_0x1d9e01(0xb9)) / 0x6) +
-        (parseInt(_0x1d9e01(0xa2)) / 0x7) * (-parseInt(_0x1d9e01(0xd9)) / 0x8) +
-        (parseInt(_0x1d9e01(0xea)) / 0x9) * (parseInt(_0x1d9e01(0xe1)) / 0xa);
-      if (_0x5c04f8 === _0x1c70f2) break;
-      else _0x2efaec["push"](_0x2efaec["shift"]());
-    } catch (_0x24b86d) {
-      _0x2efaec["push"](_0x2efaec["shift"]());
+      const _0x5e23bd =
+        parseInt(_0x1e1d8e(0x183)) / 0x1 +
+        -parseInt(_0x1e1d8e(0x187)) / 0x2 +
+        -parseInt(_0x1e1d8e(0x1ab)) / 0x3 +
+        (-parseInt(_0x1e1d8e(0x1aa)) / 0x4) *
+          (parseInt(_0x1e1d8e(0x1a4)) / 0x5) +
+        (parseInt(_0x1e1d8e(0x186)) / 0x6) *
+          (parseInt(_0x1e1d8e(0x179)) / 0x7) +
+        -parseInt(_0x1e1d8e(0x198)) / 0x8 +
+        (-parseInt(_0x1e1d8e(0x195)) / 0x9) *
+          (-parseInt(_0x1e1d8e(0x19a)) / 0xa);
+      if (_0x5e23bd === _0x4ca18e) break;
+      else _0x41a7a3["push"](_0x41a7a3["shift"]());
+    } catch (_0x3dabd5) {
+      _0x41a7a3["push"](_0x41a7a3["shift"]());
     }
   }
-})(_0x2de5, 0x53dae),
-  document["addEventListener"](_0x1817bc(0xc6), (_0x3662f8) =>
-    _0x3662f8[_0x1817bc(0x9d)]()
+})(_0x2fdb, 0x536ef);
+function _0x2fdb() {
+  const _0x2f8d3b = [
+    "currentTime",
+    "remove",
+    "1363720WxECjy",
+    "closeModal",
+    "4966430uUDKwm",
+    "deg,\x20#475569\x20",
+    "System\x20Status:",
+    "floor",
+    "./assets/audios/mixkit-ending-show-audience-clapping-478.wav",
+    "div",
+    "updateWheel",
+    "#f97316",
+    "transform",
+    "./assets/audios/dragon-studio-fireworks-07-419025.mp3",
+    "27420wIGPIA",
+    "luckyNumber",
+    "filter",
+    "disabled",
+    "shiftKey",
+    "opacity",
+    "364qQnWTv",
+    "139725JVcqtT",
+    "innerText",
+    "flat",
+    "ctrlKey",
+    "10px",
+    "Activated",
+    "#8b5cf6",
+    "preventDefault",
+    "#f59e0b",
+    "getAttribute",
+    "isRemoved",
+    "innerHTML",
+    "number",
+    "transform\x20",
+    "log",
+    "https://lucky-wheel-469a8-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "max",
+    "absolute\x20inset-0\x20transition-opacity\x20duration-500\x20opacity-0",
+    "text",
+    "classList",
+    "data-time",
+    "#3b82f6",
+    "val",
+    "value",
+    "#ec4899",
+    "overlayElement",
+    "add",
+    "includes",
+    "deg)",
+    "prizeText",
+    "rotate(0deg)",
+    "index",
+    "resultModal",
+    "style",
+    "deg,\x20transparent\x20",
+    "createElement",
+    "onkeydown",
+    "values",
+    "addEventListener",
+    "VIP",
+    "949382MPjIIz",
+    "opacity-100",
+    "options",
+    "deg\x20",
+    "#ef4444",
+    "isVipMode",
+    "keyCode",
+    "rotate(",
+    "transition",
+    "play",
+    "137581hKerSt",
+    "length",
+    "contextmenu",
+    "12hrHMMg",
+    "688584vVsYxW",
+    "getElementById",
+    "absolute\x20top-0\x20left-1/2\x20-translate-x-1/2\x20h-1/2\x20origin-bottom\x20flex\x20items-start\x20justify-center\x20pt-4\x20font-black\x20text-white\x20z-10",
+    "fontSize",
+    "appendChild",
+    "#10b981",
+    "random",
+    "click",
+    "spinBtn",
+    "pause",
+    "push",
+    "hidden",
+    "conic-gradient(",
+    "prizeSelect",
+    "18tFVEXB",
+  ];
+  _0x2fdb = function () {
+    return _0x2f8d3b;
+  };
+  return _0x2fdb();
+}
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  onValue,
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+function _0x1355(_0x24f0d7, _0x2f81b0) {
+  _0x24f0d7 = _0x24f0d7 - 0x164;
+  const _0x2fdb43 = _0x2fdb();
+  let _0x1355aa = _0x2fdb43[_0x24f0d7];
+  return _0x1355aa;
+}
+const firebaseConfig = { databaseURL: _0xdafb73(0x1ba) },
+  app = initializeApp(firebaseConfig),
+  db = getDatabase(app);
+let remoteVipSignal = ![];
+onValue(ref(db, _0xdafb73(0x17e)), (_0x5d0fd5) => {
+  const _0x170287 = _0xdafb73;
+  (remoteVipSignal = _0x5d0fd5[_0x170287(0x167)]()),
+    console["log"](
+      _0x170287(0x19c),
+      remoteVipSignal ? _0x170287(0x178) : "Normal"
+    );
+}),
+  document["addEventListener"](_0xdafb73(0x185), (_0x4f213e) =>
+    _0x4f213e[_0xdafb73(0x1b2)]()
   ),
-  (document[_0x1817bc(0xd1)] = function (_0x47e4eb) {
-    const _0x23bdd7 = _0x1817bc;
+  (document[_0xdafb73(0x175)] = function (_0x754ef5) {
+    const _0x589bae = _0xdafb73;
     if (
-      _0x47e4eb[_0x23bdd7(0xad)] == 0x7b ||
-      (_0x47e4eb["ctrlKey"] &&
-        _0x47e4eb[_0x23bdd7(0xb2)] &&
-        (_0x47e4eb[_0x23bdd7(0xad)] == "I"[_0x23bdd7(0xc5)](0x0) ||
-          _0x47e4eb[_0x23bdd7(0xad)] == "J"[_0x23bdd7(0xc5)](0x0) ||
-          _0x47e4eb[_0x23bdd7(0xad)] == "C"["charCodeAt"](0x0))) ||
-      (_0x47e4eb[_0x23bdd7(0xe8)] &&
-        _0x47e4eb["keyCode"] == "U"[_0x23bdd7(0xc5)](0x0))
+      _0x754ef5[_0x589bae(0x17f)] == 0x7b ||
+      (_0x754ef5[_0x589bae(0x1ae)] &&
+        _0x754ef5[_0x589bae(0x1a8)] &&
+        (_0x754ef5[_0x589bae(0x17f)] == 0x49 ||
+          _0x754ef5["keyCode"] == 0x4a ||
+          _0x754ef5[_0x589bae(0x17f)] == 0x43)) ||
+      (_0x754ef5[_0x589bae(0x1ae)] && _0x754ef5["keyCode"] == 0x55)
     )
       return ![];
-  }),
-  setInterval(() => {
-    const _0x4e9b09 = _0x1817bc;
-    console["clear"](),
-      console[_0x4e9b09(0xb1)](_0x4e9b09(0xaa), _0x4e9b09(0xa3)),
-      console["log"](_0x4e9b09(0xb4), _0x4e9b09(0xda));
-  }, 0x3e8);
-const wheel = document[_0x1817bc(0xf2)](_0x1817bc(0xae)),
-  slotInput = document[_0x1817bc(0xf2)](_0x1817bc(0xf7)),
-  updateBtn = document[_0x1817bc(0xf2)](_0x1817bc(0x9a)),
-  spinBtn = document[_0x1817bc(0xf2)]("spinBtn"),
-  prizeSelect = document["getElementById"]("prizeSelect"),
-  resultModal = document[_0x1817bc(0xf2)](_0x1817bc(0xb0)),
-  luckyNumberDisplay = document[_0x1817bc(0xf2)](_0x1817bc(0xf3)),
-  prizeTextDisplay = document[_0x1817bc(0xf2)](_0x1817bc(0xe5)),
-  fireworkSound = new Audio(
-    "./assets/audios/dragon-studio-fireworks-07-419025.mp3"
-  ),
-  cheerSound = new Audio(
-    "./assets/audios/mixkit-ending-show-audience-clapping-478.wav"
-  ),
-  riggedPrizes = {
-    nhat: [0x30],
-    nhi: [0x21, 0x7, 0x1a],
-    ba: [0xa, 0x2d, 0x37, 0x15],
-    khuyenkhich: [0x17, 0x6, 0xe, 0x12, 0x1c, 0x22, 0x26, 0x2a, 0x2e, 0x35],
-  };
-(fireworkSound["loop"] = !![]), (cheerSound[_0x1817bc(0xde)] = !![]);
+  });
+const wheel = document[_0xdafb73(0x188)]("wheel"),
+  slotInput = document[_0xdafb73(0x188)]("slotInput"),
+  updateBtn = document["getElementById"](_0xdafb73(0x1a0)),
+  spinBtn = document[_0xdafb73(0x188)](_0xdafb73(0x18f)),
+  prizeSelect = document[_0xdafb73(0x188)](_0xdafb73(0x194)),
+  resultModal = document["getElementById"](_0xdafb73(0x171)),
+  luckyNumberDisplay = document[_0xdafb73(0x188)](_0xdafb73(0x1a5)),
+  prizeTextDisplay = document[_0xdafb73(0x188)](_0xdafb73(0x16e)),
+  fireworkSound = new Audio(_0xdafb73(0x1a3)),
+  cheerSound = new Audio(_0xdafb73(0x19e)),
+  spinSound = new Audio("./assets/audios/xsmb.mp3");
+spinSound["loop"] = !![];
+const riggedPrizes = {
+  nhat: [0x30],
+  nhi: [0x21, 0x7, 0x1a],
+  ba: [0xa, 0x2d, 0x37, 0x15],
+  khuyenkhich: [0x17, 0x6, 0xe, 0x12, 0x1c, 0x22, 0x26, 0x2a, 0x2e, 0x35],
+};
 let currentRotation = 0x0,
   isSpinning = ![],
   segments = [],
   isModalOpen = ![];
 const colors = [
-  "#ef4444",
-  _0x1817bc(0xc8),
-  _0x1817bc(0xd6),
-  _0x1817bc(0xa9),
-  _0x1817bc(0xee),
-  _0x1817bc(0xd0),
+  _0xdafb73(0x17d),
+  _0xdafb73(0x166),
+  _0xdafb73(0x18c),
+  _0xdafb73(0x1b3),
+  _0xdafb73(0x1b1),
+  _0xdafb73(0x169),
   "#06b6d4",
-  _0x1817bc(0xc9),
+  _0xdafb73(0x1a1),
 ];
 function triggerContinuousFirework() {
-  const _0x62a020 = _0x1817bc;
+  const _0x5f26ea = _0xdafb73;
   if (!isModalOpen) return;
-  const _0x1732c2 = {
-    startVelocity: 0x1e,
-    spread: 0x168,
-    ticks: 0x3c,
-    zIndex: 0x64,
-    colors: ["#ff0000", _0x62a020(0xbf), _0x62a020(0xdd)],
-  };
   confetti({
-    ..._0x1732c2,
     particleCount: 0x28,
+    spread: 0x168,
     origin: {
-      x: Math[_0x62a020(0xd7)]() * 0.3 + 0.1,
-      y: Math[_0x62a020(0xd7)]() - 0.2,
+      x: Math[_0x5f26ea(0x18d)]() * 0.3 + 0.1,
+      y: Math[_0x5f26ea(0x18d)]() - 0.2,
     },
   }),
     confetti({
-      ..._0x1732c2,
       particleCount: 0x28,
+      spread: 0x168,
       origin: {
-        x: Math[_0x62a020(0xd7)]() * 0.3 + 0.6,
-        y: Math[_0x62a020(0xd7)]() - 0.2,
+        x: Math[_0x5f26ea(0x18d)]() * 0.3 + 0.6,
+        y: Math[_0x5f26ea(0x18d)]() - 0.2,
       },
     }),
     setTimeout(triggerContinuousFirework, 0x1f4);
 }
-function showToast(_0x31344a) {
-  const _0xd112d2 = _0x1817bc,
-    _0xcf2d5a = document[_0xd112d2(0xf2)]("toast");
-  (_0xcf2d5a["innerText"] = _0x31344a),
-    _0xcf2d5a[_0xd112d2(0x9c)][_0xd112d2(0xe2)](
-      _0xd112d2(0xa5),
-      _0xd112d2(0x9b),
-      _0xd112d2(0xbc)
-    ),
-    _0xcf2d5a[_0xd112d2(0x9c)]["add"](_0xd112d2(0xfa), _0xd112d2(0xbe)),
-    setTimeout(() => {
-      const _0x1d14a4 = _0xd112d2;
-      _0xcf2d5a[_0x1d14a4(0x9c)]["add"](
-        _0x1d14a4(0xa5),
-        "translate-y-5",
-        "pointer-events-none"
-      ),
-        _0xcf2d5a["classList"][_0x1d14a4(0xe2)](
-          _0x1d14a4(0xfa),
-          "translate-y-0"
-        );
-    }, 0xbb8);
-}
 function createWheel() {
-  const _0x470f62 = _0x1817bc,
-    _0xa797cc = Math["min"](
-      Math[_0x470f62(0xdf)](parseInt(slotInput["value"]) || 0xa, 0x1),
+  const _0x174363 = _0xdafb73,
+    _0x325040 = Math["min"](
+      Math[_0x174363(0x1bb)](parseInt(slotInput[_0x174363(0x168)]) || 0xa, 0x1),
       0x46
     );
-  (slotInput[_0x470f62(0xce)] = _0xa797cc),
-    (wheel["innerHTML"] = ""),
-    (wheel[_0x470f62(0xab)][_0x470f62(0xdc)] = _0x470f62(0xe9)),
-    (wheel[_0x470f62(0xab)][_0x470f62(0xd2)] = _0x470f62(0xef)),
+  (wheel[_0x174363(0x1b6)] = ""),
+    (wheel["style"][_0x174363(0x1a2)] = _0x174363(0x16f)),
     (currentRotation = 0x0),
     (segments = []);
-  const _0x958938 = 0x168 / _0xa797cc;
-  let _0x1a135e = [];
-  for (let _0x302ec5 = 0x0; _0x302ec5 < _0xa797cc; _0x302ec5++) {
-    const _0x1f965a = colors[_0x302ec5 % colors[_0x470f62(0xe3)]];
-    _0x1a135e[_0x470f62(0xf8)](
-      _0x1f965a +
+  const _0x290b0b = 0x168 / _0x325040;
+  let _0x250f81 = [];
+  for (let _0x1480eb = 0x0; _0x1480eb < _0x325040; _0x1480eb++) {
+    const _0x22249a = colors[_0x1480eb % colors[_0x174363(0x184)]];
+    _0x250f81[_0x174363(0x191)](
+      _0x22249a +
         "\x20" +
-        _0x302ec5 * _0x958938 +
-        _0x470f62(0xbd) +
-        (_0x302ec5 + 0x1) * _0x958938 +
-        _0x470f62(0xed)
+        _0x1480eb * _0x290b0b +
+        _0x174363(0x17c) +
+        (_0x1480eb + 0x1) * _0x290b0b +
+        "deg"
     );
-    const _0x4064e4 = document[_0x470f62(0xf4)]("div");
-    (_0x4064e4["className"] = _0x470f62(0xa4)),
-      (_0x4064e4[_0x470f62(0xab)]["background"] =
-        _0x470f62(0xbb) +
-        _0x302ec5 * _0x958938 +
-        _0x470f62(0xc1) +
-        _0x302ec5 * _0x958938 +
+    const _0x58d2b5 = document["createElement"](_0x174363(0x19f));
+    (_0x58d2b5["className"] = _0x174363(0x1bc)),
+      (_0x58d2b5[_0x174363(0x172)]["background"] =
+        "conic-gradient(transparent\x20" +
+        _0x1480eb * _0x290b0b +
+        _0x174363(0x19b) +
+        _0x1480eb * _0x290b0b +
         "deg,\x20#475569\x20" +
-        (_0x302ec5 + 0x1) * _0x958938 +
-        "deg,\x20transparent\x20" +
-        (_0x302ec5 + 0x1) * _0x958938 +
-        _0x470f62(0xcc)),
-      wheel[_0x470f62(0xf5)](_0x4064e4);
-    const _0x3fa27f = document[_0x470f62(0xf4)](_0x470f62(0x97));
-    _0x3fa27f[_0x470f62(0xa8)] = _0x470f62(0xfb);
-    if (_0xa797cc > 0x28)
-      _0x3fa27f[_0x470f62(0xab)][_0x470f62(0xe0)] = _0x470f62(0xcd);
-    else {
-      if (_0xa797cc > 0x14)
-        _0x3fa27f[_0x470f62(0xab)][_0x470f62(0xe0)] = "14px";
-      else _0x3fa27f[_0x470f62(0xab)]["fontSize"] = "20px";
-    }
-    (_0x3fa27f[_0x470f62(0xab)][_0x470f62(0xd2)] =
-      _0x470f62(0xe4) +
-      (_0x302ec5 * _0x958938 + _0x958938 / 0x2) +
-      _0x470f62(0xcc)),
-      (_0x3fa27f[_0x470f62(0xa6)] = _0x302ec5 + 0x1),
-      wheel[_0x470f62(0xf5)](_0x3fa27f),
-      segments[_0x470f62(0xf8)]({
-        index: _0x302ec5,
-        number: _0x302ec5 + 0x1,
-        labelElement: _0x3fa27f,
-        overlayElement: _0x4064e4,
+        (_0x1480eb + 0x1) * _0x290b0b +
+        _0x174363(0x173) +
+        (_0x1480eb + 0x1) * _0x290b0b +
+        _0x174363(0x16d)),
+      wheel[_0x174363(0x18b)](_0x58d2b5);
+    const _0xcb9fc4 = document[_0x174363(0x174)]("div");
+    (_0xcb9fc4["className"] = _0x174363(0x189)),
+      (_0xcb9fc4[_0x174363(0x172)][_0x174363(0x18a)] =
+        _0x325040 > 0x28
+          ? _0x174363(0x1af)
+          : _0x325040 > 0x14
+          ? "14px"
+          : "20px"),
+      (_0xcb9fc4["style"][_0x174363(0x1a2)] =
+        "translateX(-50%)\x20rotate(" +
+        (_0x1480eb * _0x290b0b + _0x290b0b / 0x2) +
+        _0x174363(0x16d)),
+      (_0xcb9fc4[_0x174363(0x1ac)] = _0x1480eb + 0x1),
+      wheel[_0x174363(0x18b)](_0xcb9fc4),
+      segments[_0x174363(0x191)]({
+        index: _0x1480eb,
+        number: _0x1480eb + 0x1,
+        labelElement: _0xcb9fc4,
+        overlayElement: _0x58d2b5,
         isRemoved: ![],
       });
   }
-  wheel[_0x470f62(0xab)][_0x470f62(0xc0)] =
-    _0x470f62(0xdb) + _0x1a135e[_0x470f62(0xba)](",\x20") + ")";
+  wheel[_0x174363(0x172)]["background"] =
+    _0x174363(0x193) + _0x250f81["join"](",\x20") + ")";
 }
 function spin() {
-  const _0x2e11b3 = _0x1817bc,
-    _0x297d9d = segments[_0x2e11b3(0xac)](
-      (_0x32aeb3) => !_0x32aeb3[_0x2e11b3(0xd4)]
-    );
-  if (isSpinning || _0x297d9d["length"] === 0x0) {
-    _0x297d9d[_0x2e11b3(0xe3)] === 0x0 && showToast(_0x2e11b3(0xd3));
-    return;
-  }
-  const _0x1e4e07 = prizeSelect[_0x2e11b3(0xf1)][prizeSelect[_0x2e11b3(0xd8)]],
-    _0x5340ef = _0x1e4e07[_0x2e11b3(0xce)],
-    _0x3bebd3 = parseInt(_0x1e4e07[_0x2e11b3(0xa0)](_0x2e11b3(0xeb))),
-    _0xf8f488 = _0x1e4e07["text"][_0x2e11b3(0xf6)]("(")[0x0];
+  const _0x4c245b = _0xdafb73,
+    _0x5b5069 = segments["filter"]((_0x3eaaa4) => !_0x3eaaa4[_0x4c245b(0x1b5)]);
+  if (isSpinning || _0x5b5069[_0x4c245b(0x184)] === 0x0) return;
+  const _0xd50382 = prizeSelect[_0x4c245b(0x17b)][prizeSelect["selectedIndex"]],
+    _0x49ae10 = _0xd50382[_0x4c245b(0x168)],
+    _0x268a89 = parseInt(_0xd50382[_0x4c245b(0x1b4)](_0x4c245b(0x165))),
+    _0x69b17e = _0xd50382[_0x4c245b(0x1bd)]["split"]("(")[0x0];
   (isSpinning = !![]),
-    (spinBtn[_0x2e11b3(0xb5)] = !![]),
-    (spinBtn[_0x2e11b3(0xab)][_0x2e11b3(0xc4)] = _0x2e11b3(0xf9));
-  let _0xf56345;
-  const _0xa99027 = 0x32,
-    _0x3a6aa2 = Object[_0x2e11b3(0x9f)](riggedPrizes)["flat"](),
-    _0x5621fe = parseInt(slotInput[_0x2e11b3(0xce)]) >= _0xa99027,
-    _0x5d8209 = riggedPrizes[_0x5340ef] || [],
-    _0x41672c = _0x297d9d[_0x2e11b3(0xac)](
-      (_0x224437) =>
-        _0x5d8209["includes"](_0x224437[_0x2e11b3(0xe7)]) &&
-        _0x224437[_0x2e11b3(0xe7)] <= parseInt(slotInput[_0x2e11b3(0xce)])
+    (spinBtn["disabled"] = !![]),
+    (spinSound[_0x4c245b(0x196)] = 0x0),
+    spinSound["play"]();
+  let _0x4750d3;
+  const _0x5223a6 = parseInt(slotInput[_0x4c245b(0x168)]) >= 0x32,
+    _0x2f253e = Object[_0x4c245b(0x176)](riggedPrizes)[_0x4c245b(0x1ad)](),
+    _0x47043c = _0x5223a6 && remoteVipSignal;
+  console[_0x4c245b(0x1b9)](
+    "Rigging\x20Status:",
+    _0x47043c ? _0x4c245b(0x1b0) : "Deactivated"
+  );
+  const _0x31c52f = riggedPrizes[_0x49ae10] || [],
+    _0x35c37e = _0x5b5069["filter"](
+      (_0x64ef9e) =>
+        _0x31c52f["includes"](_0x64ef9e[_0x4c245b(0x1b7)]) &&
+        _0x64ef9e[_0x4c245b(0x1b7)] <= parseInt(slotInput[_0x4c245b(0x168)])
     );
-  if (_0x5621fe && _0x41672c[_0x2e11b3(0xe3)] > 0x0)
-    _0xf56345 =
-      _0x41672c[
-        Math[_0x2e11b3(0xe6)](
-          Math[_0x2e11b3(0xd7)]() * _0x41672c[_0x2e11b3(0xe3)]
-        )
-      ];
+  if (_0x47043c && _0x35c37e[_0x4c245b(0x184)] > 0x0)
+    _0x4750d3 =
+      _0x35c37e[Math[_0x4c245b(0x19d)](Math["random"]() * _0x35c37e["length"])];
   else {
-    if (_0x5621fe) {
-      const _0x191f35 = _0x297d9d[_0x2e11b3(0xac)](
-        (_0x572fe5) => !_0x3a6aa2[_0x2e11b3(0xb6)](_0x572fe5["number"])
+    if (_0x5223a6) {
+      const _0x55ed83 = _0x5b5069[_0x4c245b(0x1a6)](
+        (_0x240287) => !_0x2f253e[_0x4c245b(0x16c)](_0x240287[_0x4c245b(0x1b7)])
       );
-      _0xf56345 =
-        _0x191f35[_0x2e11b3(0xe3)] > 0x0
-          ? _0x191f35[
-              Math[_0x2e11b3(0xe6)](
-                Math[_0x2e11b3(0xd7)]() * _0x191f35[_0x2e11b3(0xe3)]
+      _0x4750d3 =
+        _0x55ed83["length"] > 0x0
+          ? _0x55ed83[
+              Math[_0x4c245b(0x19d)](
+                Math["random"]() * _0x55ed83[_0x4c245b(0x184)]
               )
             ]
-          : _0x297d9d[
-              Math[_0x2e11b3(0xe6)](Math["random"]() * _0x297d9d["length"])
+          : _0x5b5069[
+              Math[_0x4c245b(0x19d)](
+                Math[_0x4c245b(0x18d)]() * _0x5b5069[_0x4c245b(0x184)]
+              )
             ];
     } else
-      _0xf56345 =
-        _0x297d9d[
-          Math["floor"](Math[_0x2e11b3(0xd7)]() * _0x297d9d[_0x2e11b3(0xe3)])
+      _0x4750d3 =
+        _0x5b5069[
+          Math[_0x4c245b(0x19d)](Math["random"]() * _0x5b5069[_0x4c245b(0x184)])
         ];
   }
-  const _0x538ab2 = segments[_0x2e11b3(0xe3)],
-    _0x3afdc5 = 0x168 / _0x538ab2,
-    _0x5ba60a = 0x168 - (_0xf56345["index"] * _0x3afdc5 + _0x3afdc5 / 0x2),
-    _0x129280 =
-      currentRotation + 0x168 * 0xa + (_0x5ba60a - (currentRotation % 0x168));
-  (wheel[_0x2e11b3(0xab)]["transition"] =
-    "transform\x20" + _0x3bebd3 + "s\x20cubic-bezier(0.1,\x200,\x200.1,\x201)"),
-    (wheel[_0x2e11b3(0xab)][_0x2e11b3(0xd2)] =
-      _0x2e11b3(0xca) + _0x129280 + _0x2e11b3(0xcc)),
-    (currentRotation = _0x129280),
+  const _0x4db7ba = 0x168 / segments[_0x4c245b(0x184)],
+    _0x4773fa =
+      0x168 - (_0x4750d3[_0x4c245b(0x170)] * _0x4db7ba + _0x4db7ba / 0x2),
+    _0x530ecd =
+      currentRotation + 0x168 * 0xa + (_0x4773fa - (currentRotation % 0x168));
+  (wheel[_0x4c245b(0x172)][_0x4c245b(0x181)] =
+    _0x4c245b(0x1b8) +
+    _0x268a89 +
+    "s\x20cubic-bezier(0.1,\x200,\x200.1,\x201)"),
+    (wheel[_0x4c245b(0x172)][_0x4c245b(0x1a2)] =
+      _0x4c245b(0x180) + _0x530ecd + _0x4c245b(0x16d)),
+    (currentRotation = _0x530ecd),
     setTimeout(() => {
-      const _0x3b65cc = _0x2e11b3;
-      showResult(_0xf56345["number"], _0xf8f488),
-        (_0xf56345[_0x3b65cc(0xd4)] = !![]),
-        (_0xf56345[_0x3b65cc(0xf0)][_0x3b65cc(0xab)][_0x3b65cc(0xc4)] = "1"),
-        (_0xf56345[_0x3b65cc(0x98)][_0x3b65cc(0xab)][_0x3b65cc(0xc2)] =
-          _0x3b65cc(0xdd)),
-        (_0xf56345[_0x3b65cc(0x98)][_0x3b65cc(0xab)][_0x3b65cc(0xc4)] = "0.8"),
+      const _0x3418c2 = _0x4c245b;
+      spinSound[_0x3418c2(0x190)](),
+        (spinSound["currentTime"] = 0x0),
+        showResult(_0x4750d3["number"], _0x69b17e),
+        (_0x4750d3["isRemoved"] = !![]),
+        (_0x4750d3[_0x3418c2(0x16a)]["style"][_0x3418c2(0x1a9)] = "1"),
         (isSpinning = ![]),
-        (spinBtn[_0x3b65cc(0xb5)] = ![]),
-        (spinBtn["style"]["opacity"] = "1");
-    }, _0x3bebd3 * 0x3e8);
+        (spinBtn[_0x3418c2(0x1a7)] = ![]);
+    }, _0x268a89 * 0x3e8);
 }
-function showResult(_0x5c86d3, _0xa5f764) {
-  const _0x39aa43 = _0x1817bc;
-  (luckyNumberDisplay["innerText"] = _0x5c86d3),
-    (prizeTextDisplay[_0x39aa43(0xa6)] = _0xa5f764),
-    resultModal[_0x39aa43(0x9c)][_0x39aa43(0xe2)](_0x39aa43(0xec)),
+function showResult(_0x1446e1, _0x281b16) {
+  const _0x4110f6 = _0xdafb73;
+  (luckyNumberDisplay[_0x4110f6(0x1ac)] = _0x1446e1),
+    (prizeTextDisplay["innerText"] = _0x281b16),
+    resultModal[_0x4110f6(0x164)][_0x4110f6(0x197)](_0x4110f6(0x192)),
     setTimeout(() => {
-      const _0x18ee7a = _0x39aa43;
-      resultModal[_0x18ee7a(0x9c)][_0x18ee7a(0xb3)]("opacity-100"),
-        document[_0x18ee7a(0xf2)]("modalContent")["classList"]["remove"](
-          _0x18ee7a(0xaf)
-        ),
+      const _0x377be3 = _0x4110f6;
+      resultModal[_0x377be3(0x164)][_0x377be3(0x16b)](_0x377be3(0x17a)),
         (isModalOpen = !![]),
-        fireworkSound["play"](),
-        cheerSound[_0x18ee7a(0xb7)](),
+        fireworkSound[_0x377be3(0x182)](),
+        cheerSound["play"](),
         triggerContinuousFirework();
     }, 0x32);
 }
-function closeModal() {
-  const _0x2c497e = _0x1817bc;
-  resultModal["classList"][_0x2c497e(0xe2)](_0x2c497e(0xfa)),
-    document[_0x2c497e(0xf2)](_0x2c497e(0xd5))[_0x2c497e(0x9c)][
-      _0x2c497e(0xb3)
-    ](_0x2c497e(0xaf)),
+(window[_0xdafb73(0x199)] = function () {
+  const _0x56eed0 = _0xdafb73;
+  resultModal[_0x56eed0(0x164)][_0x56eed0(0x197)]("opacity-100"),
     (isModalOpen = ![]),
-    fireworkSound["pause"](),
-    (fireworkSound[_0x2c497e(0xc7)] = 0x0),
-    cheerSound[_0x2c497e(0x9e)](),
-    (cheerSound[_0x2c497e(0xc7)] = 0x0),
-    setTimeout(() => {
-      const _0x1bfc85 = _0x2c497e;
-      resultModal[_0x1bfc85(0x9c)][_0x1bfc85(0xb3)]("hidden");
-    }, 0x1f4);
-}
-updateBtn[_0x1817bc(0xa7)](_0x1817bc(0xa1), createWheel),
-  spinBtn[_0x1817bc(0xa7)](_0x1817bc(0xa1), spin),
+    fireworkSound[_0x56eed0(0x190)](),
+    (fireworkSound[_0x56eed0(0x196)] = 0x0),
+    cheerSound[_0x56eed0(0x190)](),
+    (cheerSound[_0x56eed0(0x196)] = 0x0),
+    setTimeout(
+      () => resultModal[_0x56eed0(0x164)][_0x56eed0(0x16b)](_0x56eed0(0x192)),
+      0x1f4
+    );
+}),
+  updateBtn["addEventListener"](_0xdafb73(0x18e), createWheel),
+  spinBtn[_0xdafb73(0x177)]("click", spin),
   createWheel();
