@@ -1,0 +1,23 @@
+body {
+  font-family: "Inter", sans-serif;
+  /* Thêm hàm url() bao quanh đường dẫn */
+  background: url("./assets/images/2.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Hiệu ứng đổ bóng cho các con số trên vòng quay */
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Tùy chỉnh thanh cuộn */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
